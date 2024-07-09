@@ -1,2 +1,5 @@
 /* my_project/base_static/global/css/style.css */
 
+body {
+    background: green;
+}
