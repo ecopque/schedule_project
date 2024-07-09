@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'schedule_project.urls'
+ROOT_URLCONF = 'schedule.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'schedule_project.wsgi.application'
+WSGI_APPLICATION = 'schedule.wsgi.application'
 
 
 # Database
@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (
-    BASE_DIR / 'base_static' # my_project/base_static
+    BASE_DIR / 'base_static', # my_project/base_static
 )
 
 # Default primary key field type
