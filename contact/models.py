@@ -1,3 +1,5 @@
+# my_project/contact/models.py
+
 from django.db import models
 from django.utils import timezone
 
@@ -11,3 +13,4 @@ class cls_contact(models.Model):
     var_phone = models.CharField(max_length=20)
     var_email = models.EmailField(max_length=254)
     var_createddate = models.DateTimeField(default=timezone.now)
+    var_description = models.TextField(blank=True)
