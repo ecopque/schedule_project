@@ -3,8 +3,6 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
 # id (primary key - automatic);
 # first_name (string), last_name (string), phone (string), e-mail (email), created_date (date), description (text), category (foreing key), show (boolean), owner (foreing key) and picture (image).
 class cls_contact(models.Model):
