@@ -13,6 +13,6 @@ class cls_contact(models.Model):
     var_createddate = models.DateTimeField(name='Create Date', default=timezone.now)
     var_description = models.TextField(name='Description', blank=True)
 
-    class Meta:
+    class Meta: #cls_contact()
         verbose_name = 'Contact'
         verbose_name_plural = 'Contacts'
