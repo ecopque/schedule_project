@@ -10,7 +10,7 @@ class cls_contact(models.Model):
     last_name = models.CharField(max_length=50, blank=True)
     phone = models.CharField(max_length=20)
     email = models.EmailField(max_length=254)
-    create_date = models.DateTimeField(default=timezone.now)
+    created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
 
     class Meta: #5: #cls_contact()
