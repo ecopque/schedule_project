@@ -6,6 +6,12 @@ from django.utils import timezone
 # id (primary key - automatic);
 # first_name (string), last_name (string), phone (string), e-mail (email), created_date (date), description (text);
 # category (foreing key), show (boolean), owner (foreing key) and picture (image).
+
+class cls_category(models.Model):
+    name = ...
+
+
+
 class cls_contact(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
@@ -14,7 +20,7 @@ class cls_contact(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
     
-    show = models.BooleanField(default=True) #
+    show = models.BooleanField(default=True)
     picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
 
     class Meta: #5: #cls_contact()
