@@ -13,6 +13,10 @@ class cls_contact(models.Model):
     email = models.EmailField(max_length=254)
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
+    
+    show = models.BooleanField(default=True)
+    
+
 
     class Meta: #5: #cls_contact()
         verbose_name = 'Contact'
