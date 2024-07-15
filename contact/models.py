@@ -7,10 +7,8 @@ from django.utils import timezone
 # first_name (string), last_name (string), phone (string), e-mail (email), created_date (date), description (text);
 # category (foreing key), show (boolean), owner (foreing key) and picture (image).
 
-class cls_category(models.Model):
-    name = ...
-
-
+class cls_category(models.Model): #
+    name = models.CharField(max_length=50) #
 
 class cls_contact(models.Model):
     first_name = models.CharField(max_length=50)
@@ -22,6 +20,7 @@ class cls_contact(models.Model):
     
     show = models.BooleanField(default=True)
     picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
+    category = models.ForeignKey(cls_category, on_delete=models.SET_NULL, blank=True, null=True) #
 
     class Meta: #5: #cls_contact()
         verbose_name = 'Contact'
