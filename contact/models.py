@@ -15,7 +15,7 @@ class cls_contact(models.Model):
     description = models.TextField(blank=True)
     
     show = models.BooleanField(default=True)
-    
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
 
 
     class Meta: #5: #cls_contact()
