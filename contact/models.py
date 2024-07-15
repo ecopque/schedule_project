@@ -14,9 +14,8 @@ class cls_contact(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
     
-    show = models.BooleanField(default=True)
+    show = models.BooleanField(default=True) #
     picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
-
 
     class Meta: #5: #cls_contact()
         verbose_name = 'Contact'

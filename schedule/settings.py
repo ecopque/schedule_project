@@ -125,7 +125,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = BASE_DIR / 'static' # my_project/static
-MEDIA_URL = 'media/'
+MEDIA_URL = 'media/' #127.0.0.1:8000/media/pictures
 MEDIA_ROOT = BASE_DIR / 'media' # my_project/media
 
 # Default primary key field type
