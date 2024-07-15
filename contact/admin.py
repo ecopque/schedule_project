@@ -3,7 +3,7 @@
 # my_project/contact/admin.py
 
 from django.contrib import admin
-from contact.models import cls_contact # my_project/contact/models.py
+from contact.models import cls_contact, cls_category # my_project/contact/models.py
 
 @admin.register(cls_contact)
 class cls_contactadmin(admin.ModelAdmin):
@@ -15,3 +15,8 @@ class cls_contactadmin(admin.ModelAdmin):
     list_max_show_all = 1000
     # list_editable = ('first_name', 'last_name',) # my_project/contact/models.py
     list_display_links = ('id', 'phone',) # my_project/contact/models.py
+
+@admin.register(cls_category) #
+class cls_categoryadmin(admin.ModelAdmin): #
+    list_display = 'name', # # my_project/contact/models.py
+    ordering = '-id', # # my_project/contact/models.py

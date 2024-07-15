@@ -10,6 +10,13 @@ from django.utils import timezone
 class cls_category(models.Model): #
     name = models.CharField(max_length=50) #
 
+    class Meta: # #cls_category()
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+    def __str__(self) -> str: #
+        return f'{self.name}' #
+
 class cls_contact(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
@@ -22,7 +29,7 @@ class cls_contact(models.Model):
     picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
     category = models.ForeignKey(cls_category, on_delete=models.SET_NULL, blank=True, null=True) #
 
-    class Meta: #5: #cls_contact()
+    class Meta: #cls_contact()
         verbose_name = 'Contact'
         verbose_name_plural = 'Contacts'
     
