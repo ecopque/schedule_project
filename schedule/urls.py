@@ -28,5 +28,5 @@ urlpatterns = [
     path('', include('contact.urls')) # my_project/contact/urls.py
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # my_project/schedule/settings.py
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # my_project/schedule/settings.py
