@@ -15,7 +15,7 @@ class cls_category(models.Model): #
         verbose_name_plural = 'Categories'
 
     def __str__(self) -> str: #
-        return f'{self.name}' #
+        return self.name #
 
 class cls_contact(models.Model):
     first_name = models.CharField(max_length=50)
