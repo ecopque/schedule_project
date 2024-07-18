@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User #
 
 # id (primary key - automatic);
 # first_name (string), last_name (string), phone (string), e-mail (email), created_date (date), description (text);
@@ -32,6 +33,8 @@ class cls_contact(models.Model):
     class Meta: #cls_contact()
         verbose_name = 'Contact'
         verbose_name_plural = 'Contacts'
+
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True) #
     
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
