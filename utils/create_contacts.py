@@ -10,7 +10,7 @@ DJANGO_BASE_DIR = Path(__file__).parent.parent
 NUMBER_OF_OBJECTS = 1000
 
 sys.path.append(str(DJANGO_BASE_DIR))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'schedule.settings'
 settings.USE_TZ = False
 
 django.setup()
@@ -31,11 +31,25 @@ if __name__ =='__main__':
     
     django_contacts = []
     for _ in range(NUMBER_OF_OBJECTS):
-        profile = fake.profile()
-        email = profile['mail']
-        first_name, last_name = profile['name'].split(' ', 1)
-        phone = fake.phone_number()
-        create_date: datetime = fake.date_this_year()
-        description = random_text = fake.text(max_nb_chars=100)
-        category = choice(django_categories)
-        (...)
+        profile = fake.profile() # my_project/contact/models.py
+        email = profile['mail'] # my_project/contact/models.py
+        first_name, last_name = profile['name'].split(' ', 1) # my_project/contact/models.py
+        phone = fake.phone_number() # my_project/contact/models.py
+        created_date: datetime = fake.date_this_year() # my_project/contact/models.py
+        description = random_text = fake.text(max_nb_chars=100) # my_project/contact/models.py
+        category = choice(django_categories) # my_project/contact/models.py
+        
+        django_contacts.append(
+            cls_contact(
+                first_name=first_name, # my_project/contact/models.py
+                last_name=last_name, # my_project/contact/models.py
+                phone=phone, # my_project/contact/models.py
+                email=email, # my_project/contact/models.py
+                created_date=created_date, # my_project/contact/models.py
+                description=description, # my_project/contact/models.py
+                category=category, # my_project/contact/models.py
+            )
+        )
+    
+    if len(django_contacts) > 0:
+        cls_contact.objects.bulk_create(django_contacts)
