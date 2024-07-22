@@ -1,3 +1,5 @@
+# my_project/.gitignore
+
 # Django #
 *.log
 *.pot
@@ -6,6 +8,7 @@ __pycache__
 db.sqlite3
 media/
 static/
+schedule/local_settings.py
 
 # Backup files # 
 *.bak 

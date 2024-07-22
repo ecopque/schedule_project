@@ -132,4 +132,8 @@ MEDIA_ROOT = BASE_DIR / 'media' # my_project/media
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# Need commit.
+
+try:
+    from schedule.local_settings import *
+except ImportError:
+    ...
