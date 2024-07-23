@@ -2,6 +2,8 @@
 
 {% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
 
-{% block content %}
-     <h1>TESTING...</h1> <!-- #AQUI! -->
+{% block content %} <!-- #AQUI! -->
+     {% for contact in contacts %} <!-- #AQUI! -->
+          {{ contact.first_name }} <br> <!-- #AQUI! -->
+     {% endfor %}
 {% endblock content %}

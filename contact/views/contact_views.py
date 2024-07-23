@@ -1,6 +1,10 @@
 # my_project/contact/views/contact_views.py
 
 from django.shortcuts import render
+from contact.models import cls_contact # my_project/contact/models.py
 
 def func_index(request):
-    return render(request, 'contact/index.html',) # my_project/contact/templates/contact/index.html
+    contacts = cls_contact.objects.all() #AQUI!
+    context = {'contacts': contacts,} #AQUI!
+
+    return render(request, 'contact/index.html', context) #AQUI! # my_project/contact/templates/contact/index.html
