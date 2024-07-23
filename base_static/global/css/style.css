@@ -103,7 +103,7 @@
     background: var(--clr-light-shadow-10);
   }
   
-  .content {
+  .content { /* # Aqui! */
     max-width: var(--main-page-width);
     margin: calc(var(--spacing) * 2) auto;
     padding: var(--spacing);

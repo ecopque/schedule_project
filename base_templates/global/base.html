@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'global/css/style.css' %}"> <!-- # my_project/base_static/global/css/style.css -->
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}"> {% comment %} # my_project/base_static/global/css/style.css {% endcomment %}
 </head>
 <body>
-    <h1> QUALQUER COISA </h1> <!-- #4: -->
+    {% comment %} <h1> QUALQUER COISA </h1> {% endcomment %}
+    <main class="content"> {% comment %} #AQUI! {% endcomment %}
+        {% block content %}{% endblock content %}
+    </main>
 </body>
 </html>
