@@ -153,6 +153,7 @@
     color: var(--clr-black);
   }
   
+    /* # my_project/contact/templates/contact/index.html */
   .table-cel,
   .table-header {
     padding: var(--spacing);
