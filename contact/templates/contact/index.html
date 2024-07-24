@@ -3,7 +3,11 @@
 {% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
 
 {% block content %}
-     {% for contact in contacts %}
+     <!-- {% for contact in contacts %}
           {{ contact.first_name }} <br>
-     {% endfor %}
+     {% endfor %} -->
+     <div class="responsive-table"></div> <!-- # my_project/base_static/global/css/style.css -->
+          <table class="contacts-table"> <!-- # my_project/base_static/global/css/style.css -->
+               <caption class="table-caption"></caption> <!-- # my_project/base_static/global/css/style.css -->
+          </table>
 {% endblock content %}

@@ -1,4 +1,4 @@
-/* my_project/base_static/global/css/style.css */
+/* # my_project/base_static/global/css/style.css */
 
 :root {
     --spacing: 1.5rem;
@@ -113,18 +113,20 @@
     border-radius: var(--default-border-radius);
   }
   
-  /* #Atenção! */
+  /* # my_project/contact/templates/contact/index.html */
   .responsive-table {
     width: 100%;
     overflow-x: auto;
   }
   
+  /* # my_project/contact/templates/contact/index.html */
   .contacts-table {
     width: 100%;
     min-width: var(--table-min-width);
     border-collapse: collapse;
   }
   
+  /* # my_project/contact/templates/contact/index.html */
   .table-caption {
     font-size: var(--medium-font-size);
     font-weight: bold;
