@@ -103,7 +103,8 @@
     background: var(--clr-light-shadow-10);
   }
   
-  .content { /* #AQUI! */
+  /* #Atenção! */
+  .content {
     max-width: var(--main-page-width);
     margin: calc(var(--spacing) * 2) auto;
     padding: var(--spacing);
@@ -112,6 +113,7 @@
     border-radius: var(--default-border-radius);
   }
   
+  /* #Atenção! */
   .responsive-table {
     width: 100%;
     overflow-x: auto;
