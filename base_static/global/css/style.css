@@ -133,6 +133,7 @@
     padding: var(--spacing);
   }
   
+  /* # my_project/contact/templates/contact/index.html */
   .table-row {
     text-align: left;
     text-overflow: ellipsis;

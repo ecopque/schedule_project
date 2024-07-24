@@ -6,8 +6,21 @@
      <!-- {% for contact in contacts %}
           {{ contact.first_name }} <br>
      {% endfor %} -->
-     <div class="responsive-table"></div> <!-- # my_project/base_static/global/css/style.css -->
+     <div class="responsive-table"> <!-- # my_project/base_static/global/css/style.css -->
           <table class="contacts-table"> <!-- # my_project/base_static/global/css/style.css -->
-               <caption class="table-caption"></caption> <!-- # my_project/base_static/global/css/style.css -->
+               <caption class="table-caption">
+                    Contacts
+               </caption> <!-- # my_project/base_static/global/css/style.css -->
+               <thead>
+                    <tr class="table-row table-row-header"> <!-- # my_project/base_static/global/css/style.css -->
+                         <th class="table-header"> ID <!-- # my_project/base_static/global/css/style.css -->
+                         <th class="table-header"> First Name <!-- # my_project/base_static/global/css/style.css -->
+                         <th class="table-header"> Last Name <!-- # my_project/base_static/global/css/style.css -->
+                         <th class="table-header"> Phone <!-- # my_project/base_static/global/css/style.css -->
+                         <th class="table-header"> E-mail <!-- # my_project/base_static/global/css/style.css -->
+                         </th>
+                    </tr>
+               </thead>
           </table>
+     </div>
 {% endblock content %}
