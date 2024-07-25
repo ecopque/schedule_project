@@ -1,0 +1,11 @@
+<!-- # my_project/contact/templates/contact/contact.html -->
+
+{% extends 'global/base.html' %} <!-- ## -->
+
+{% block content %}
+    <div class="single-contact"> <!-- ## # my_project/contact/templates/contact/index.html-->
+        <h1 class="single-contact-name"> <!-- ## # my_project/contact/templates/contact/index.html-->
+            {{contact.first_name}} {{contact.last_name}} <!-- ## # my_project/contact/views/contact_views.py-->
+        </h1>
+    </div>
+{% endblock content %}
