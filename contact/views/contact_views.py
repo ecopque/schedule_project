@@ -12,10 +12,10 @@ def func_index(request):
 
     return render(request, 'contact/index.html', context) # my_project/contact/templates/contact/index.html
 
-def func_contact(request, contact_id): ##
-    single_contact = cls_contact.objects.filter(pk=contact_id, show=True).first() ##
-    if single_contact is None: ##
-        raise Http404() ##
-    context = {'contact': single_contact,} ## # my_project/contact/templates/contact/contact.html
+def func_contact(request, contact_id):
+    single_contact = cls_contact.objects.filter(pk=contact_id, show=True).first()
+    if single_contact is None:
+        raise Http404()
+    context = {'contact': single_contact,} # my_project/contact/templates/contact/contact.html
 
-    return render(request, 'contact/contact.html', context) ##
+    return render(request, 'contact/contact.html', context)

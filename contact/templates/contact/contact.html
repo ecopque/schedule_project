@@ -1,17 +1,17 @@
 <!-- # my_project/contact/templates/contact/contact.html -->
 
-{% extends 'global/base.html' %} <!-- ## # my_project/base_templates/global/base.html --> 
+{% extends 'global/base.html' %} <!-- # my_project/base_templates/global/base.html --> 
 
 {% block content %}
-    <div class="single-contact"> <!-- ## # my_project/contact/templates/contact/index.html-->
-        <h1 class="single-contact-name"> <!-- ## # my_project/contact/templates/contact/index.html-->
+    <div class="single-contact"> <!-- # my_project/contact/templates/contact/index.html-->
+        <h1 class="single-contact-name"> <!-- # my_project/contact/templates/contact/index.html-->
             {{contact.first_name}} {{contact.last_name}} <!-- ## # my_project/contact/views/contact_views.py-->
         </h1>
-        <p><b>ID:</b> {{contact.id}}</p> <!-- ## ##BBB # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
-        <p><b>E-mail:</b> {{contact.email}}</p> <!-- ## # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
-        <p><b>Phone:</b> {{contact.phone}}</p> <!-- ## # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
-        <p><b>Created Date:</b> {{contact.created_date}}</p> <!-- ## # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
-        <p><b>Description:</b> {{contact.description}}</p> <!-- ## # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
-        <p><b>Category:</b> {{contact.category.name}}</p> <!-- ## # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>ID:</b> {{contact.id}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>E-mail:</b> {{contact.email}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>Phone:</b> {{contact.phone}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>Created Date:</b> {{contact.created_date}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>Description:</b> {{contact.description}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+        <p><b>Category:</b> {{contact.category.name}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
     </div>
 {% endblock content %}
