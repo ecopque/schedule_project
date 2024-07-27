@@ -1,44 +1,13 @@
 <!-- # my_project/base_templates/global/base.html -->
 
-{% load static %}<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en"> <!-- "pt-BR"-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'global/css/style.css' %}"> <!-- # my_project/base_static/global/css/style.css -->
+    {% include 'global/partials/_head.html' %} <!-- ## # my_project/base_templates/partials/_header.html -->
 </head>
 <body>
     <!-- <h1> QUALQUER COISA </h1> -->
-     <header class="header"> <!-- # my_project/base_static/global/css/style.css -->
-        <h1 class="header-heading"> <!-- # my_project/base_static/global/css/style.css -->
-            <a href="{% url 'contact_index' %}" class="header-link"> <!-- # my_project/contact/urls.py -->
-                Agenda <!-- ##AAA: -->
-            </a>
-        </h1>
-        <nav class="menu"> <!-- # my_project/base_static/global/css/style.css -->
-            <ul class="menu-list"> <!-- # my_project/base_static/global/css/style.css -->
-                <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="" class="menu-link"> <!-- # my_project/base_static/global/css/style.css -->
-                        Link1!
-                    </a>
-                </li>
-                <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="" class="menu-link"> <!-- # my_project/base_static/global/css/style.css -->
-                        Link2!
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="search"> <!-- # my_project/base_static/global/css/style.css -->
-            <form action="" method="get"> <!-- # -->
-                <input type="search" class="search-input" placeholder="Search" id="search" name="q"> <!-- # -->
-
-                </input>
-            </form>
-        </div>
-     </header>
+     {% include 'global/partials/_header.html' %} <!-- ## # my_project/base_templates/partials/_header.html -->
     <main class="content"> <!-- # my_project/base_static/global/css/style.css -->
         {% block content %}{% endblock content %}
     </main>
