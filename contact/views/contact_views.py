@@ -20,3 +20,10 @@ def func_contact(request, contact_id):
     context = {'contact': single_contact, 'site_title': contact_name} # my_project/contact/templates/contact/contact.html
 
     return render(request, 'contact/contact.html', context)
+
+def func_search(request): ##
+    search_value = request.GET.get('q', '').strip() ## # my_project/base_templates/partials/_header.html
+    print(search_value)
+    contacts = cls_contact.objects.filter(show=True).order_by('-id') ## # my_project/contact/models.py
+    context = {'contacts': contacts, 'site_title': 'Search - '} ##
+    return render(request, 'contact/index.html', context) ##
