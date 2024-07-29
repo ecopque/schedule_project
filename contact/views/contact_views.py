@@ -5,12 +5,18 @@ from django.shortcuts import redirect
 from django.db.models import Q
 from contact.models import cls_contact # my_project/contact/models.py
 from django.http import Http404
+from django.core.paginator import Paginator ##
 
 def func_index(request):
     # contacts = cls_contact.objects.all().order_by('-id')
     contacts = cls_contact.objects.filter(show=True).order_by('-id')
     print(contacts.query)
-    context = {'contacts': contacts, 'site_title': 'Contacts - '}
+    
+    paginator = Paginator(contacts, 10) ##
+    page_number = request.GET.get("page") ##
+    page_obj = paginator.get_page(page_number) ##
+    # context = {'contacts': contacts, 'site_title': 'Contacts - '}
+    context = {'page_obj': page_obj, 'site_title': 'Contacts - '} ## # my_project/contact/templates/contact/index.html
 
     return render(request, 'contact/index.html', context) # my_project/contact/templates/contact/index.html
 
