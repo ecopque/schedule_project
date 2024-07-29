@@ -3,7 +3,7 @@
 {% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
 
 {% block content %}
- 
+{% if contacts %} <!-- ## -->
      <div class="responsive-table"> <!-- # my_project/base_static/global/css/style.css -->
           <table class="contacts-table"> <!-- # my_project/base_static/global/css/style.css -->
                <caption class="table-caption">
@@ -44,4 +44,11 @@
                </tbody>
           </table>
      </div>
+{% else %} <!-- ## -->
+<div class="single-contact"> <!-- ## # my_project/contact/templates/contact/index.html-->
+     <h1 class="single-contact-name"> <!-- ## # my_project/contact/templates/contact/index.html-->
+          No contacts found! <!-- ## -->
+     </h1>
+ </div>
+{% endif %}   
 {% endblock content %}

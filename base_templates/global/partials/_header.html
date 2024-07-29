@@ -20,11 +20,9 @@
             </li>
         </ul>
     </nav>
-
     <div class="search"> <!-- # my_project/base_static/global/css/style.css -->
-        <form action="{% url 'contact_search' %}" method="GET"> <!-- ##AAA: # my_project/contact/urls.py -->
-            <input type="search" class="search-input" placeholder="Search first or last name" id="search" name="q"> <!-- # -->
-
+        <form action="{% url 'contact_search' %}" method="GET"> <!-- # my_project/contact/urls.py -->
+            <input type="search" class="search-input" placeholder="Search first or last name" id="search" name="q" value="{{request.GET.q.strip}}"> <!-- ## # my_project/contact/urls.py -->
             </input>
         </form>
     </div>
