@@ -3,7 +3,7 @@
 {% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
 
 {% block content %}
-{% if contacts %} <!-- ## -->
+{% if contacts %} <!-- # -->
      <div class="responsive-table"> <!-- # my_project/base_static/global/css/style.css -->
           <table class="contacts-table"> <!-- # my_project/base_static/global/css/style.css -->
                <caption class="table-caption">
@@ -23,7 +23,7 @@
                     {% for contact in contacts %} <!-- # my_project/contact/views/contact_views.py -->
                          <tr class="table-row">
                               <td class="table-cel">
-                                   <a class="table-link" href="{% url 'contact_contact' contact.id %}"> <!-- ## # my_project/contact/urls.py -->
+                                   <a class="table-link" href="{% url 'contact_contact' contact.id %}"> <!-- # my_project/contact/urls.py -->
                                         {{contact.id}} <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
                                    </a>
                               </td>
@@ -44,10 +44,10 @@
                </tbody>
           </table>
      </div>
-{% else %} <!-- ## -->
-<div class="single-contact"> <!-- ## # my_project/contact/templates/contact/index.html-->
-     <h1 class="single-contact-name"> <!-- ## # my_project/contact/templates/contact/index.html-->
-          No contacts found! <!-- ## -->
+{% else %} <!-- # -->
+<div class="single-contact"> <!-- # my_project/base_static/global/css/style.css -->
+     <h1 class="single-contact-name"> <!-- # my_project/base_static/global/css/style.css -->
+          No contacts found! <!-- # -->
      </h1>
  </div>
 {% endif %}   
