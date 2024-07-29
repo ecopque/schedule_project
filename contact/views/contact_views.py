@@ -27,6 +27,6 @@ def func_search(request): ##
     print('search_value: ', search_value)
     if search_value == '': ##
         return redirect('contact_index') ##
-    contacts = cls_contact.objects.filter(show=True).filter(first_name__icontains=search_value).order_by('-id') ## # my_project/contact/models.py
+    contacts = cls_contact.objects.filter(show=True).filter(first_name__icontains=search_value, last_name__icontains=search_value).order_by('-id') ## # my_project/contact/models.py
     context = {'contacts': contacts, 'site_title': 'Search - '} ##
     return render(request, 'contact/index.html', context) ##
