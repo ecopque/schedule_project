@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 from django.db.models import Q
 from contact.models import cls_contact # my_project/contact/models.py
 from django.http import Http404
-from django.core.paginator import Paginator ##
+from django.core.paginator import Paginator
 
 def func_index(request):
     # contacts = cls_contact.objects.all().order_by('-id')
