@@ -12,11 +12,11 @@ def func_index(request):
     contacts = cls_contact.objects.filter(show=True).order_by('-id')
     print(contacts.query)
     
-    paginator = Paginator(contacts, 10) ##
-    page_number = request.GET.get("page") ##
-    page_obj = paginator.get_page(page_number) ##
+    paginator = Paginator(contacts, 10)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     # context = {'contacts': contacts, 'site_title': 'Contacts - '}
-    context = {'page_obj': page_obj, 'site_title': 'Contacts - '} ## # my_project/contact/templates/contact/index.html
+    context = {'page_obj': page_obj, 'site_title': 'Contacts - '}# my_project/contact/templates/contact/index.html
 
     return render(request, 'contact/index.html', context) # my_project/contact/templates/contact/index.html
 
@@ -36,10 +36,10 @@ def func_search(request):
         return redirect('contact_index') # my_project/contact/urls.py
     contacts = cls_contact.objects.filter(show=True).filter(Q(first_name__icontains=search_value) | Q(last_name__icontains=search_value) |  Q(phone__icontains=search_value) |  Q(email__icontains=search_value)).order_by('-id') # my_project/contact/models.py
 
-    paginator = Paginator(contacts, 10) ##
-    page_number = request.GET.get("page") ##
-    page_obj = paginator.get_page(page_number) ##
-    context = {'page_obj': page_obj, 'site_title': 'Search - '} ##
+    paginator = Paginator(contacts, 10)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+    context = {'page_obj': page_obj, 'site_title': 'Search - '}
 
     # context = {'contacts': contacts, 'site_title': 'Search - '}
     return render(request, 'contact/index.html', context)
