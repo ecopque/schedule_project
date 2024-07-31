@@ -2,7 +2,7 @@
 
 from django.urls import path
 # from contact import views as contact_views # my_project/contact/contact_views.py
-from contact.views import contact_views, contact_forms ##
+from contact.views import contact_views, contact_forms
 
 # app_name = 'contact'
 urlpatterns = [

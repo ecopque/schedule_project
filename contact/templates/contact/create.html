@@ -12,26 +12,28 @@
     >
     
     {% csrf_token %}
-    
-    <table>
-      {{ form }}
-    </table>
-
     <!--
-      <div class="form-content"> 
-        <div class="form-group">
-          <label for="id_first_name">first_name</label>
-          <input type="text" name="first_name" maxlength="255" id="id_first_name">
-        </div>
+    <table>
+      {{ form }} ## # my_project/contact/views/contact_forms.py
+    </table>
+    -->
 
+      <div class="form-content">
+        {% for field in form %} <!-- ## # my_project/contact/views/contact_forms.py -->
+          <div class="form-group">
+            <label for="id_first_name">first_name</label>
+            <input type="text" name="first_name" maxlength="255" id="id_first_name">
+          </div>
+        {% endfor %}
+        <!--
         <div class="form-content">
           <div class="form-group">
             <label for="id_last_name">last_name</label>
             <input type="text" name="last_name" maxlength="255" id="id_last_name">
           </div>
         </div>
+        -->
       </div>
-    -->
 
       <div class="form-content">
         <div class="form-group">

@@ -11,7 +11,7 @@ from django import forms ##
 class cls_contactform(forms.ModelForm): ##
     class Meta: ##
         model = cls_contact ##
-        fields = ('first_name', 'last_name', 'phone',) ##
+        fields = ('first_name', 'last_name', 'phone',) ## (# my_project/contact/templates/contact/create.html)
 
 def func_create(request):
     # if request.method == 'POST':
