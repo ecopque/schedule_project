@@ -9,4 +9,4 @@ from django.core.paginator import Paginator
 
 def func_create(request):
     context = {}
-    return render(request, 'contact/create.html', context) ##
+    return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html

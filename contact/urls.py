@@ -10,8 +10,6 @@ urlpatterns = [
      path('search/', contact_views.func_search, name='contact_search'), # my_project/contact/contact_views.py
 
      # Contact CRUD
-     path('contacts/create', contact_forms.func_create, name='contact_create'), ##
+     path('contacts/create', contact_forms.func_create, name='contact_create'), # my_project/contact/contact_forms.py
      path('contacts/<int:contact_id>/read', contact_views.func_contact, name='contact_contact'), # my_project/contact/contact_views.py
-     # path('contacts/<int:contact_id/update', contact_views.func_contact, name='contact_update'),
-     # path('contacts/<int:contact_id/delete', contact_views.func_contact, name='contact_delete'),
 ]
