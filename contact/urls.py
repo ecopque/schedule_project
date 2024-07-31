@@ -2,7 +2,7 @@
 
 from django.urls import path
 # from contact import views as contact_views # my_project/contact/contact_views.py
-from contact.views import contact_views
+from contact.views import contact_views, contact_forms ##
 
 # app_name = 'contact'
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
      path('search/', contact_views.func_search, name='contact_search'), # my_project/contact/contact_views.py
 
      # Contact CRUD
-     # path('contacts/create', contact_views.func_contact, name='contact_create'),
+     path('contacts/create', contact_forms.func_create, name='contact_create'), ##
      path('contacts/<int:contact_id>/read', contact_views.func_contact, name='contact_contact'), # my_project/contact/contact_views.py
      # path('contacts/<int:contact_id/update', contact_views.func_contact, name='contact_update'),
      # path('contacts/<int:contact_id/delete', contact_views.func_contact, name='contact_delete'),
