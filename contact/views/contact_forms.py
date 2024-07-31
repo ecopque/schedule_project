@@ -10,8 +10,8 @@ from django.core.paginator import Paginator
 def func_create(request):
     if request.method == 'POST':
         print(request.method)
-        print(request.POST.get('first_name')) # my_project/contact/templates/contact/create.html
-        print(request.POST.get('last_name')) # my_project/contact/templates/contact/create.html
+        print(request.POST.get('first_name')) ## # my_project/contact/templates/contact/create.html
+        print(request.POST.get('last_name')) ## # my_project/contact/templates/contact/create.html
 
 
     context = {}
