@@ -6,12 +6,12 @@ from django.db.models import Q
 from contact.models import cls_contact # my_project/contact/models.py
 from django.http import Http404
 from django.core.paginator import Paginator
-from django import forms ##
+from django import forms
 
-class cls_contactform(forms.ModelForm): ##
-    class Meta: ##
-        model = cls_contact ##
-        fields = ('first_name', 'last_name', 'phone',) ## (# my_project/contact/templates/contact/create.html)
+class cls_contactform(forms.ModelForm):
+    class Meta:
+        model = cls_contact
+        fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
 
 def func_create(request):
     # if request.method == 'POST':
@@ -21,9 +21,9 @@ def func_create(request):
 
     # POST method
     if request.method == 'POST':
-        context = {'form': cls_contactform(data=request.POST)} ##
+        context = {'form': cls_contactform(data=request.POST)}
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
     
     # GET method
-    context = {'form': cls_contactform()} ##
+    context = {'form': cls_contactform()}
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html

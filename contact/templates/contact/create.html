@@ -14,15 +14,15 @@
     {% csrf_token %}
     <!--
     <table>
-      {{ form }} ## # my_project/contact/views/contact_forms.py
+      {{ form }} # my_project/contact/views/contact_forms.py
     </table>
     -->
 
       <div class="form-content">
-        {% for field in form %} <!-- ## # my_project/contact/views/contact_forms.py -->
+        {% for field in form %} <!-- # my_project/contact/views/contact_forms.py -->
           <div class="form-group">
-            <label for={{field.id_for_label}}>{{field.label}}</label> <!-- ## BBB:-->
-            {{field}} <!-- ## AAA:-->
+            <label for={{field.id_for_label}}>{{field.label}}</label> <!-- #:-->
+            {{field}} <!-- #:-->
             <!-- <input type="text" name="first_name" maxlength="255" id="id_first_name"> -->
           </div>
         {% endfor %}
