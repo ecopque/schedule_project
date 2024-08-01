@@ -21,8 +21,9 @@
       <div class="form-content">
         {% for field in form %} <!-- ## # my_project/contact/views/contact_forms.py -->
           <div class="form-group">
-            <label for={{field.id_for_label}}>first_name</label> <!-- ## -->
-            <input type="text" name="first_name" maxlength="255" id="id_first_name">
+            <label for={{field.id_for_label}}>{{field.label}}</label> <!-- ## BBB:-->
+            {{field}} <!-- ## AAA:-->
+            <!-- <input type="text" name="first_name" maxlength="255" id="id_first_name"> -->
           </div>
         {% endfor %}
         <!--
