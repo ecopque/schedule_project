@@ -7,11 +7,18 @@ from contact.models import cls_contact # my_project/contact/models.py
 from django.http import Http404
 from django.core.paginator import Paginator
 from django import forms
+from django.core.exceptions import ValidationError ##
 
 class cls_contactform(forms.ModelForm):
     class Meta:
         model = cls_contact
         fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
+
+    # Is not working
+    def clean(self): ##
+        cleaned_data = self.cleaned_data ##
+        self.add_error('first_name', ValidationError('Mensagem de erro', code='invalid')) ##
+        return super().clean() ##
 
 def func_create(request):
     # if request.method == 'POST':
