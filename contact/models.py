@@ -21,7 +21,7 @@ class cls_category(models.Model):
 class cls_contact(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
-    phone = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20) # verbose_name = 'Phone Number'
     email = models.EmailField(max_length=254)
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
