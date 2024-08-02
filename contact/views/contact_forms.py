@@ -1,23 +1,18 @@
 # my_project/contact/views/contact_forms.py
 
 from django.shortcuts import render
-from django.shortcuts import redirect
-from django.db.models import Q
-from contact.models import cls_contact # my_project/contact/models.py
-from django.http import Http404
-from django.core.paginator import Paginator
-from django import forms
-from django.core.exceptions import ValidationError #
+from contact.forms import cls_contactform # my_project/contact/forms.py
 
-class cls_contactform(forms.ModelForm):
-    class Meta:
-        model = cls_contact
-        fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
+# Moved to forms.py
+# class cls_contactform(forms.ModelForm):
+#     class Meta:
+#         model = cls_contact
+#         fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
 
-    def clean(self): #
-        cleaned_data = self.cleaned_data #
-        self.add_error('first_name', ValidationError('Error message.', code='invalid')) #
-        return super().clean() #
+#     def clean(self):
+#         cleaned_data = self.cleaned_data
+#         self.add_error('first_name', ValidationError('Error message.', code='invalid'))
+#         return super().clean()
 
 def func_create(request):
     # if request.method == 'POST':
