@@ -23,7 +23,7 @@
           <div class="form-group">
             <label for={{field.id_for_label}}>{{field.label}}</label> <!-- #:-->
             {{field}} <!-- #:-->
-            {{field.errors}} <!-- ## -->
+            {{field.errors}} <!-- ## # my_project/base_static/global/css/style.css -->
             <!-- <input type="text" name="first_name" maxlength="255" id="id_first_name"> -->
           </div>
         {% endfor %}
@@ -39,9 +39,16 @@
 
       <div class="form-content">
         <div class="form-group">
+          <p class="message error"> Lorem ipsum my eggs. </p> <!-- ## # my_project/base_static/global/css/style.css -->
+        </div>
+      </div>
+
+      <div class="form-content">
+        <div class="form-group">
           <button class="btn" type="submit">Send</button>
         </div>
       </div>
+
     </form>
   </div>
 {% endblock content %}
