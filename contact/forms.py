@@ -9,7 +9,8 @@ class cls_contactform(forms.ModelForm):
         model = cls_contact
         fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
 
-        widgets = {'first_name': forms.PasswordInput()} ###
+        widgets = {'first_name': forms.PasswordInput()} ##
+        widgets = {'phone': forms.Textarea()} ##
 
     def clean(self):
         # cleaned_data = self.cleaned_data
