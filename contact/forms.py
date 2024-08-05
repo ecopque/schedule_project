@@ -7,7 +7,7 @@ from contact.models import cls_contact # my_project/contact/models.py
 class cls_contactform(forms.ModelForm):
     class Meta:
         model = cls_contact
-        fields = ('first_name', 'last_name', 'phone',) # (# my_project/contact/templates/contact/create.html)
+        fields = ('first_name', 'last_name', 'phone',) ##
 
         widgets = {'first_name': forms.PasswordInput()} ##
         widgets = {'phone': forms.Textarea()} ##
