@@ -27,5 +27,6 @@ class cls_contactform(forms.ModelForm):
         first_name = self.cleaned_data.get('first_name')
         print('def clean_first_name: print.')
         if first_name == 'ABC': ##
-            raise ValidationError('Shit! Do not enter ABC in this field.', code='invalid') ##
+            raise ValidationError('Shit! Do not enter ABC in this field.', code='invalid') #2: ##
+            # self.add_error('first_name', ValidationError('Error message.', code='invalid')) ##
         return first_name
