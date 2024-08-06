@@ -20,5 +20,10 @@ class cls_contactform(forms.ModelForm):
 
     def clean(self):
         # cleaned_data = self.cleaned_data
-        self.add_error('first_name', ValidationError('Error message.', code='invalid'))
+        # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
         return super().clean()
+
+    def clean_first_name(self): #1:
+        first_name = self.cleaned_data.get('first_name')
+        print('def clean_first_name: print.')
+        return first_name
