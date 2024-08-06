@@ -8,7 +8,7 @@ class cls_contactform(forms.ModelForm):
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
-    #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',})
+    #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
 
     first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here3',}), label='First Nameee', help_text='Help text.') # my_project/contact/templates/contact/create.html
 
@@ -16,12 +16,18 @@ class cls_contactform(forms.ModelForm):
         model = cls_contact
         fields = ('first_name', 'last_name', 'phone',)
 
-        # widgets = {'first_name': forms.PasswordInput(), 'last_name': forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here',}), 'phone': forms.Textarea()}
+        # widgets = {'first_name': forms.PasswordInput(), 'last_name': forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here',}), 'phone': forms.Textarea()} # substituted
 
     def clean(self):
-        # cleaned_data = self.cleaned_data
-        # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
-        return super().clean()
+        cleaned_data = self.cleaned_data
+        # self.add_error('first_name', ValidationError('Error message.', code='invalid')) # analysis
+        first_name = cleaned_data.get('first_name') ##
+        last_name = cleaned_data.get('last_name') ##
+        if first_name == last_name: ##
+            msg_error = ValidationError('First name cannot be the same as second name.', code='invalid')
+            self.add_error('first_name', msg_error) ##
+            self.add_error('last_name', msg_error) ##
+        return super().clean() ##
 
     def clean_first_name(self): ## #1:
         first_name = self.cleaned_data.get('first_name')
