@@ -21,18 +21,18 @@ class cls_contactform(forms.ModelForm):
     def clean(self):
         cleaned_data = self.cleaned_data
         # self.add_error('first_name', ValidationError('Error message.', code='invalid')) # analysis
-        first_name = cleaned_data.get('first_name') ##
-        last_name = cleaned_data.get('last_name') ##
-        if first_name == last_name: ##
+        first_name = cleaned_data.get('first_name')
+        last_name = cleaned_data.get('last_name')
+        if first_name == last_name:
             msg_error = ValidationError('First name cannot be the same as second name.', code='invalid')
-            self.add_error('first_name', msg_error) ##
-            self.add_error('last_name', msg_error) ##
-        return super().clean() ##
+            self.add_error('first_name', msg_error)
+            self.add_error('last_name', msg_error)
+        return super().clean()
 
-    def clean_first_name(self): ## #1:
+    def clean_first_name(self):
         first_name = self.cleaned_data.get('first_name')
         print('def clean_first_name: print.')
-        if first_name == 'ABC': ##
-            raise ValidationError('Shit! Do not enter ABC in this field.', code='invalid') #2: ##
-            # self.add_error('first_name', ValidationError('Error message.', code='invalid')) #3: ##
+        if first_name == 'ABC':
+            raise ValidationError('Shit! Do not enter ABC in this field.', code='invalid')
+            # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
         return first_name
