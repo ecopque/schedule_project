@@ -21,8 +21,7 @@ def func_create(request):
             contact = form.save(commit=False)
             contact.show = False
             contact.save()
-            return redirect('contact_update', ) # my_project/contact/urls.py
-
+            return redirect('contact_update', ) ## # my_project/contact/urls.py
 
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
