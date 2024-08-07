@@ -21,7 +21,7 @@ def func_create(request):
 
         if form.is_valid():
             contact = form.save(commit=False)
-            contact.show = False
+            contact.show = True
             contact.save()
             return redirect('contact_update', contact_id=contact.pk) ## # my_project/contact/urls.py
 
