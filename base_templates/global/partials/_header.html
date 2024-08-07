@@ -6,11 +6,12 @@
             Schedule Project (beta) <!-- # -->
         </a>
     </h1>
+
     <nav class="menu"> <!-- # my_project/base_static/global/css/style.css -->
         <ul class="menu-list"> <!-- # my_project/base_static/global/css/style.css -->
             <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                <a href="" class="menu-link"> <!-- # my_project/base_static/global/css/style.css -->
-                    Link1!
+                <a href="{% url 'contact_create' %}" class="menu-link"> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    CREATE
                 </a>
             </li>
             <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
@@ -20,10 +21,12 @@
             </li>
         </ul>
     </nav>
+    
     <div class="search"> <!-- # my_project/base_static/global/css/style.css -->
         <form action="{% url 'contact_search' %}" method="GET"> <!-- # my_project/contact/urls.py -->
             <input type="search" class="search-input" placeholder="Search first or last name" id="search" name="q" value="{{request.GET.q.strip}}"> <!-- # my_project/contact/urls.py -->
             </input>
         </form>
     </div>
+    
  </header>
