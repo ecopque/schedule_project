@@ -33,7 +33,7 @@ def func_create(request):
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
 def func_update(request, contact_id):
-    contact = get_list_or_404(cls_contact, contact_id=contact_id, show=True) ## # my_project/contact/models.py
+    contact = get_list_or_404(cls_contact, pk=contact_id, show=True) ## # my_project/contact/models.py
     form_action = reverse('contact_update', args=(contact_id,)) ##
     
     if request.method == 'POST':
