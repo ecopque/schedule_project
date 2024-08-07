@@ -14,7 +14,7 @@ def func_create(request):
     #     print(request.POST.get('last_name')) # my_project/contact/templates/contact/create.html
 
     # POST method
-    form_action = reverse('contact_create') ##
+    form_action = reverse('contact_create') ## # my_project/contact/urls.py
     if request.method == 'POST':
         form = cls_contactform(data=request.POST)
         context = {'form':form, 'form_action': form_action,} ## #% my_project/contact/templates/contact/create.html
