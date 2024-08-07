@@ -15,7 +15,7 @@ def func_create(request):
     form_action = reverse('contact_create') ##
     if request.method == 'POST':
         form = cls_contactform(data=request.POST)
-        context = {'form':form, 'form_action': form_action} ##
+        context = {'form':form, 'form_action': form_action,} ## #% my_project/contact/templates/contact/create.html
 
         if form.is_valid():
             contact = form.save(commit=False)
@@ -27,5 +27,5 @@ def func_create(request):
 
     # GET method
     # context = {'form': cls_contactform()}
-    context = {'form':form, 'form_action': form_action} ##
+    context = {'form':cls_contactform(), 'form_action': form_action,} ##
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
