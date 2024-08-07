@@ -16,8 +16,6 @@ def func_create(request):
         context = {'form':form} ## # my_project/contact/forms.py
 
         if form.is_valid(): ##
-            # form.save()
-
             contact = form.save(commit=False) ##
             contact.show = False ##
             contact.save() ##
@@ -25,7 +23,7 @@ def func_create(request):
 
 
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
-    
+
     # GET method
     context = {'form': cls_contactform()}
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
