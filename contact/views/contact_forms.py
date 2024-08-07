@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from contact.forms import cls_contactform # my_project/contact/forms.py
 from django.shortcuts import redirect
+from django.urls import reverse ##
 
 def func_create(request):
     # if request.method == 'POST':
@@ -11,6 +12,7 @@ def func_create(request):
     #     print(request.POST.get('last_name')) # my_project/contact/templates/contact/create.html
 
     # POST method
+    form_action = reverse('contact_create') ##
     if request.method == 'POST':
         form = cls_contactform(data=request.POST)
         context = {'form':form} # my_project/contact/forms.py
@@ -19,7 +21,7 @@ def func_create(request):
             contact = form.save(commit=False)
             contact.show = False
             contact.save()
-            return redirect('contact_create') # my_project/contact/urls.py
+            return redirect('contact_update', ) # my_project/contact/urls.py
 
 
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
