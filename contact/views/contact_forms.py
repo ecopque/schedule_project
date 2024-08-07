@@ -11,7 +11,12 @@ def func_create(request):
 
     # POST method
     if request.method == 'POST':
-        context = {'form': cls_contactform(data=request.POST)}
+        form = cls_contactform(data=request.POST) ##
+        context = {'form':form} ## # my_project/contact/forms.py
+
+        if form.is_valid(): ##
+            print('Form is valid.')
+
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
     
     # GET method
