@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 from contact.forms import cls_contactform # my_project/contact/forms.py
-from django.shortcuts import redirect ##
+from django.shortcuts import redirect
 
 def func_create(request):
     # if request.method == 'POST':
@@ -12,13 +12,13 @@ def func_create(request):
 
     # POST method
     if request.method == 'POST':
-        form = cls_contactform(data=request.POST) ##
-        context = {'form':form} ## # my_project/contact/forms.py
+        form = cls_contactform(data=request.POST)
+        context = {'form':form} # my_project/contact/forms.py
 
-        if form.is_valid(): ##
-            contact = form.save(commit=False) ##
-            contact.show = False ##
-            contact.save() ##
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.show = False
+            contact.save()
             return redirect('contact_create') # my_project/contact/urls.py
 
 
