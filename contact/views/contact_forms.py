@@ -16,6 +16,7 @@ def func_create(request):
 
         if form.is_valid(): ##
             print('Form is valid.')
+            form.save() ##
 
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
     
