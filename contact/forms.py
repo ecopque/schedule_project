@@ -22,6 +22,7 @@ class cls_contactform(forms.ModelForm):
         # self.add_error('first_name', ValidationError('Error message.', code='invalid')) # analysis
         first_name = cleaned_data.get('first_name')
         last_name = cleaned_data.get('last_name')
+
         if first_name == last_name:
             msg_error = ValidationError('First name cannot be the same as second name.', code='invalid')
             self.add_error('first_name', msg_error)
