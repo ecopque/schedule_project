@@ -5,12 +5,11 @@ from django.core.exceptions import ValidationError
 from contact.models import cls_contact # my_project/contact/models.py
 
 class cls_contactform(forms.ModelForm):
-
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
-
     first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here3',}), label='First Nameee', help_text='Help text.') # my_project/contact/templates/contact/create.html
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+    #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
 
     class Meta:
         model = cls_contact
