@@ -16,7 +16,7 @@ def func_index(request):
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
     # context = {'contacts': contacts, 'site_title': 'Contacts - '}
-    context = {'page_obj': page_obj, 'site_title': 'Contacts - '}# my_project/contact/templates/contact/index.html
+    context = {'page_obj': page_obj, 'site_title': 'Contacts - '} # my_project/contact/templates/contact/index.html
 
     return render(request, 'contact/index.html', context) # my_project/contact/templates/contact/index.html
 
