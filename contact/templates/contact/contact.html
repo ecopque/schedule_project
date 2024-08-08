@@ -13,5 +13,11 @@
         <p><b>Created Date:</b> {{contact.created_date}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
         <p><b>Description:</b> {{contact.description}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
         <p><b>Category:</b> {{contact.category.name}}</p> <!-- # my_project/contact/views/contact_views.py, # my_project/contact/models.py-->
+
+        <div class="contact-links">
+            <a href="{% url 'contact_update' contact.id %}"> <!-- ##  my_project/base_static/global/css/style.css -->
+                Update
+            </a>
+        </div>
     </div>
 {% endblock content %}
