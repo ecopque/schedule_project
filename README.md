@@ -5,4 +5,4 @@ Schedule project with some interesting technologies. Project under construction.
 
 
 ## Images of the Schedule
-![aaaaah](https://github.com/ecopque/schedule_project/prints/main.png)
+![main](https://github.com/ecopque/schedule_project/blob/main/prints/main.png)
