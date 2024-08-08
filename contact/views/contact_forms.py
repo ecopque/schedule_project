@@ -23,6 +23,7 @@ def func_create(request):
             contact = form.save(commit=False)
             contact.show = True
             contact.save()
+            # contact = form.save()
             return redirect('contact_update', contact_id=contact.pk) # my_project/contact/urls.py
 
         return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
