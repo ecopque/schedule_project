@@ -44,11 +44,11 @@ def func_update(request, contact_id):
     context = {'form':cls_contactform(instance=contact), 'form_action': form_action,}
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
-def func_delete(request, contact_id): ##
-    contact = get_object_or_404(cls_contact, pk=contact_id, show=True) ## # my_project/contact/models.py
-    confirmation = request.POST.get('confirmation', 'no') ##
+def func_delete(request, contact_id):
+    contact = get_object_or_404(cls_contact, pk=contact_id, show=True) # my_project/contact/models.py
+    confirmation = request.POST.get('confirmation', 'no')
     print('Confirmation', confirmation)
     if confirmation == 'yes':
-        contact.delete() ##
-        return redirect('contact_index') ##
-    return render(request, 'contact/contact.html', {'contact': contact, 'confirmation': confirmation}) ##
+        contact.delete()
+        return redirect('contact_index') # my_project/contact/urls.py
+    return render(request, 'contact/contact.html', {'contact': contact, 'confirmation': confirmation}) # my_project/contact/templates/contact/contact.html
