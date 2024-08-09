@@ -21,9 +21,9 @@
                 {% csrf_token %} <!-- ## -->
                 {% if confirmation == 'no' %} <!-- # my_project/contact/views/contact_forms.py -->
                     <input type="hidden" name="confirmation" value="yes"> <!-- ## -->
-                    <button class="btn btn-link btn-delete" type="submit">Confirm?</button> <!-- ## -->
+                    <button class="btn btn-link btn-delete" type="submit">Confirm?</button> <!-- ## # my_project/base_static/global/css/style.css -->
                 {% else %}
-                    <button class="btn btn-link btn-delete" type="submit"> Delete</button> <!-- ## -->
+                    <button class="btn btn-link btn-delete" type="submit"> Delete</button> <!-- ## # my_project/base_static/global/css/style.css -->
                 {% endif %}
             </form>
         </div>
