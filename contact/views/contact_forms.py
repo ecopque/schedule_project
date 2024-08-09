@@ -45,7 +45,7 @@ def func_update(request, contact_id):
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
 def func_delete(request, contact_id): ##
-    contact = get_object_or_404(cls_contact, pk=contact_id, show=True) ##
+    contact = get_object_or_404(cls_contact, pk=contact_id, show=True) ## # my_project/contact/models.py
     confirmation = request.POST.get('confirmation', 'no') ##
     print('Confirmation', confirmation)
     if confirmation == 'yes':
