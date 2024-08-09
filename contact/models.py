@@ -26,7 +26,7 @@ class cls_contact(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
     show = models.BooleanField(default=True)
-    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/') # my_project/media/pictures/ | #% # my_project/contact/templates/contact/contact.html
     category = models.ForeignKey(cls_category, on_delete=models.SET_NULL, blank=True, null=True)
 
     class Meta: #cls_contact()
