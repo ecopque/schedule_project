@@ -17,8 +17,9 @@
 
         <div class="contact-links"> <!-- ##  # my_project/base_static/global/css/style.css -->
             <a class="btn btn-link" href="{% url 'contact_update' contact.id %}">Update</a> <!-- ## # my_project/base_static/global/css/style.css | # my_project/contact/urls.py | # my_project/contact/views/contact_views.py -->
-            <form action="" method="POST">
-                <button class="btn btn=link btn-delete" type="submit">Delete</button>
+            <form action="{% url 'contact_delete' contact.id %}" method="POST"> <!-- ##  # my_project/contact/urls.py -->
+                {%csrf_token%} <!-- ## -->
+                <button class="btn btn=link btn-delete" type="submit">Delete</button> <!-- ## -->
             </form>
         </div>
 
