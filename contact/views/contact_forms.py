@@ -46,7 +46,7 @@ def func_update(request, contact_id):
 
 def func_delete(request, contact_id): ##
     contact = get_object_or_404(cls_contact, pk=contact_id, show=True) ##
-    confirmation = request.POST.get('Confirmation', 'no') ##
+    confirmation = request.POST.get('confirmation', 'no') ##
     print('Confirmation', confirmation)
     if confirmation == 'yes':
         contact.delete() ##
