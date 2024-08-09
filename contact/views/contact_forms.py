@@ -51,4 +51,4 @@ def func_delete(request, contact_id): ##
     if confirmation == 'yes':
         contact.delete() ##
         return redirect('contact_index') ##
-    return render(request, 'contact/contact.html', {'contact': contact}) ##
+    return render(request, 'contact/contact.html', {'contact': contact, 'confirmation': confirmation}) ##
