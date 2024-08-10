@@ -13,7 +13,7 @@ class cls_contactform(forms.ModelForm):
 
     class Meta:
         model = cls_contact
-        fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category',) #
+        fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',) ##AAA:
 
         # widgets = {'first_name': forms.PasswordInput(), 'last_name': forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here',}), 'phone': forms.Textarea()} # substituted
 
