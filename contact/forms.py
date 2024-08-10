@@ -11,10 +11,10 @@ class cls_contactform(forms.ModelForm):
     #     super().__init__(*args, **kwargs)
     #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
 
-    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*'})) ##BBB:
+    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*'}))
     class Meta:
         model = cls_contact
-        fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',) ##AAA:
+        fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',)
 
         # widgets = {'first_name': forms.PasswordInput(), 'last_name': forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here',}), 'phone': forms.Textarea()} # substituted
 

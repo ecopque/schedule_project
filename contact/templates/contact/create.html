@@ -31,9 +31,9 @@
           </div>
 
           {% if field.name == 'picture' and field.value.url %} <!-- # my_project/contact/forms.py-->
-            <div class="form-group">  <!-- ## -->
+            <div class="form-group">  <!-- # -->
               <p> This is the image. </p>
-              <img src="{{field.value.url}}" alt=""> <!-- ## -->
+              <img src="{{field.value.url}}" alt=""> <!-- # -->
             </div>
           {% endif %}
         {% endfor %}

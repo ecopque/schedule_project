@@ -15,7 +15,7 @@ def func_create(request):
     # POST method
     form_action = reverse('contact_create') # my_project/contact/urls.py
     if request.method == 'POST':
-        form = cls_contactform(request.POST, request.FILES) ##
+        form = cls_contactform(request.POST, request.FILES)
         context = {'form':form, 'form_action': form_action,} #% my_project/contact/templates/contact/create.html
         if form.is_valid():
             contact = form.save(commit=False)
@@ -33,7 +33,7 @@ def func_update(request, contact_id):
     contact = get_object_or_404(cls_contact, pk=contact_id, show=True) # my_project/contact/models.py
     form_action = reverse('contact_update', args=(contact_id,))
     if request.method == 'POST':
-        form = cls_contactform(request.POST, request.FILES, instance=contact) ##
+        form = cls_contactform(request.POST, request.FILES, instance=contact)
         context = {'form':form, 'form_action': form_action,} #% my_project/contact/templates/contact/create.html
         if form.is_valid():
             contact = form.save(commit=False)
