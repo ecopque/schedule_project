@@ -2,3 +2,4 @@
 
 from .contact_views import * # my_project/contact/views/contact_views.py
 from .contact_forms import * # my_project/contact/views/contact_forms.py
+from .user_forms import * # my_project/contact/views/user_forms.py
