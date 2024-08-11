@@ -1,0 +1,62 @@
+<!-- # my_project/contact/templates/contact/create.html -->
+
+{% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
+{% block content %}
+  <h1>Create Contact</h1>
+  <div class="form-wrapper">
+    <h2>Register</h2>
+    <form 
+      action="{{ form_action }}"
+      method="POST"
+    > <!-- Line "action="": # my_project/contact/views/contact_forms.py -->
+    
+    {% csrf_token %}
+
+      <div class="form-content">
+        {% for field in form %} <!-- # my_project/contact/views/contact_forms.py -->
+          <div class="form-group">
+            <label for={{field.id_for_label}}>{{field.label}}</label> <!-- #:-->
+            {{field}}
+            {{field.errors}} <!-- # my_project/base_static/global/css/style.css -->
+            <!-- <input type="text" name="first_name" maxlength="255" id="id_first_name"> -->
+            
+            {% if field.help_text %} <!-- # -->
+              <p class="help-text"> {{field.help_text}} <!-- # my_project/base_static/global/css/style.css | #(# my_project/contact/forms.py) -->
+            {% endif %}
+          </div>
+
+          {% if field.name == 'picture' and field.value.url %} <!-- # my_project/contact/forms.py-->
+            <div class="form-group">  <!-- # -->
+              <p> This is the image. </p>
+              <img src="{{field.value.url}}" alt=""> <!-- # -->
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+        <!--
+        <div class="form-content">
+          <div class="form-group">
+            <label for="id_last_name">last_name</label>
+            <input type="text" name="last_name" maxlength="255" id="id_last_name">
+          </div>
+        </div>
+        -->
+    
+      <!--
+      <div class="form-content">
+        <div class="form-group">
+          <p class="message error"> Lorem ipsum my eggs. </p> <!-- # my_project/base_static/global/css/style.css
+        </div>
+      </div>
+      -->
+
+      <div class="form-content">
+        <div class="form-group">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+{% endblock content %}
