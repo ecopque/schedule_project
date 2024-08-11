@@ -2,5 +2,5 @@
 
 from django.shortcuts import render
 
-def func_register(request):
-    return render(request, 'contact/register.html')
+def func_register(request): ##
+    return render(request, 'contact/register.html') ## # 
