@@ -39,5 +39,5 @@ class cls_contactform(forms.ModelForm):
             # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
         return first_name
     
-class cls_registerform(UserCreationForm):
+class cls_registerform(UserCreationForm): ##
     ...
