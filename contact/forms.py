@@ -3,7 +3,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from contact.models import cls_contact # my_project/contact/models.py
-from django.contrib.auth.forms import UserCreationForm ## #1:
+from django.contrib.auth.forms import UserCreationForm
 
 class cls_contactform(forms.ModelForm):
     # first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here3',}), label='First Nameee', help_text='Help text.') # my_project/contact/templates/contact/create.html
@@ -39,5 +39,5 @@ class cls_contactform(forms.ModelForm):
             # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
         return first_name
     
-class cls_registerform(UserCreationForm): ##
+class cls_registerform(UserCreationForm):
     ...
