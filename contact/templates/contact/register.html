@@ -23,13 +23,6 @@
               <p class="help-text"> {{field.help_text}} <!-- # my_project/base_static/global/css/style.css | #(# my_project/contact/forms.py) -->
             {% endif %}
           </div>
-
-          {% if field.name == 'picture' and field.value.url %} <!-- # my_project/contact/forms.py-->
-            <div class="form-group">
-              <p> This is the image. </p>
-              <img src="{{field.value.url}}" alt="">
-            </div>
-          {% endif %}
         {% endfor %}
       </div>
 
