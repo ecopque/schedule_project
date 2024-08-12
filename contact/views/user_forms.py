@@ -3,7 +3,7 @@
 from django.shortcuts import render
 from contact.forms import cls_registerform # my_project/contact/forms.py
 
-def func_register(request):
+def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
     if request.method == 'POST':
         form = cls_registerform(request.POST)
