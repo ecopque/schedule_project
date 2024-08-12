@@ -42,6 +42,8 @@ class cls_contactform(forms.ModelForm):
     
 class cls_registerform(UserCreationForm): ##
     first_name = forms.CharField(required=True, min_length=3, error_messages={'required': 'Se fudeu!'}) ## #3:
+    last_name = forms.CharField(required=True, min_length=3) ##
+    email = forms.EmailField() ##
 
     class Meta:
         model = User
