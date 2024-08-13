@@ -4,7 +4,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from contact.models import cls_contact # my_project/contact/models.py
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User ##
+from django.contrib.auth.models import User
 
 class cls_contactform(forms.ModelForm):
     # first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here3',}), label='First Nameee', help_text='Help text.') # my_project/contact/templates/contact/create.html
@@ -40,17 +40,17 @@ class cls_contactform(forms.ModelForm):
             # self.add_error('first_name', ValidationError('Error message.', code='invalid'))
         return first_name
     
-class cls_registerform(UserCreationForm): ##
-    first_name = forms.CharField(required=True, min_length=3, error_messages={'required': 'Se fudeu!'}) ## #3:
-    last_name = forms.CharField(required=True, min_length=3) ##
-    email = forms.EmailField() ##
+class cls_registerform(UserCreationForm):
+    first_name = forms.CharField(required=True, min_length=3, error_messages={'required': 'Se fudeu!'})
+    last_name = forms.CharField(required=True, min_length=3)
+    email = forms.EmailField()
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email', 'username', 'password1', 'password2') #1: ##
+        fields = ('first_name', 'last_name', 'email', 'username', 'password1', 'password2')
 
     def clean_email(self):
-        email = self.cleaned_data.get('email') ##
-        if User.objects.filter(email=email).exists(): ##
-            self.add_error('email', ValidationError('This e-mail already exists.')) ## #2:
-        return email ##
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email=email).exists():
+            self.add_error('email', ValidationError('This e-mail already exists.'))
+        return email
