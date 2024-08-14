@@ -32,4 +32,6 @@ def func_loginview(request): ##
             user = form.get_user() ##
             # messages.success(request, 'Login made successfully.') ##
             print('Authenticated user (not logged):', user)
+        else:
+            messages.error(request, 'Invalid login.') ##
     return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
