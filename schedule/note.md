@@ -4,10 +4,11 @@
 <p> . Django - Model field reference: https://docs.djangoproject.com/en/4.2/ref/models/fields/ </p>
 <p> . Django - Models: https://docs.djangoproject.com/en/4.2/topics/db/models/ </p>
 
-<p>. Login user: http://127.0.0.1:8000/admin/auth/user/</p>
+<p>. Login user/adm: http://127.0.0.1:8000/admin/auth/user/</p>
 <p>. Create contacts: http://127.0.0.1:8000/contacts/create/</p>
 <p>. List contacts: http://127.0.0.1:8000/</p>
-<p>. Login contact: http://127.0.0.1:8000/user/login/</p>
+<p>. Create user: http://127.0.0.1:8000/user/create/</p>
+<p>. Login user: http://127.0.0.1:8000/user/login/</p>
 <p></p>
 <p></p>
 <p></p>

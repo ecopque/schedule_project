@@ -1,5 +1,5 @@
 # my_project/contact/forms.py
-# http://127.0.0.1:8000/contacts/create/
+# Create contacts: http://127.0.0.1:8000/contacts/create/
 
 from django import forms
 from django.core.exceptions import ValidationError

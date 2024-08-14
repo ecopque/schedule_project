@@ -1,4 +1,6 @@
 # my_project/contact/views/user_forms.py
+# Create user: http://127.0.0.1:8000/user/create/
+# Login user: http://127.0.0.1:8000/user/login/
 
 from django.shortcuts import render
 from contact.forms import cls_registerform # my_project/contact/forms.py
@@ -28,6 +30,6 @@ def func_loginview(request): ##
         form = AuthenticationForm(request, data=request.POST) ##
         if form.is_valid(): ##
             user = form.get_user() ##
-            # messages.success(request, 'Login made successfully.') ##
+            messages.success(request, 'Login made successfully.') ##
             print(user)
     return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
