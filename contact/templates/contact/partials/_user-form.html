@@ -1,0 +1,31 @@
+<!-- # my_project/contact/templates/contact/partials/_user-form.html -->
+
+<form 
+      action="{{ form_action }}"
+      method="POST"
+      enctype="multipart/form-data"
+    > <!-- Line "action="": # my_project/contact/views/contact_forms.py -->
+      <!-- Line "enctype="multipart/form-data". Professor pediu p/ tirar mas sem ela não funcionou no meu -->
+    {% csrf_token %}
+
+      <div class="form-content">
+        {% for field in form %} <!-- # my_project/contact/views/contact_forms.py -->
+          <div class="form-group">
+            <label for={{field.id_for_label}}>{{field.label}}</label>
+            {{field}}
+            {{field.errors}} <!-- # my_project/base_static/global/css/style.css -->
+            
+            {% if field.help_text %}
+              <p class="help-text"> {{field.help_text}} <!-- # my_project/base_static/global/css/style.css | #(# my_project/contact/forms.py) -->
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="form-content">
+        <div class="form-group">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </div>
+
+    </form>
