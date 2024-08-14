@@ -8,6 +8,9 @@ def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
     
     messages.info(request, 'Any text.') ##
+    messages.success(request, 'Any text.') ##
+    messages.warning(request, 'Any text.') ##
+    messages.error(request, 'Any text.') ##
 
     if request.method == 'POST':
         form = cls_registerform(request.POST)
