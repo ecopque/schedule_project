@@ -1,4 +1,5 @@
 # my_project/contact/forms.py
+# http://127.0.0.1:8000/contacts/create/
 
 from django import forms
 from django.core.exceptions import ValidationError
@@ -13,7 +14,7 @@ class cls_contactform(forms.ModelForm):
     #     super().__init__(*args, **kwargs)
     #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
 
-    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*'}))
+    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*',}))
     class Meta:
         model = cls_contact
         fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',)

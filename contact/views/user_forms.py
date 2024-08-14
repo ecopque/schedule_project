@@ -10,9 +10,9 @@ def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
     
     messages.info(request, 'Any text.')
-    messages.success(request, 'Any text.')
-    messages.warning(request, 'Any text.')
-    messages.error(request, 'Any text.')
+    # messages.success(request, 'Any text.')
+    # messages.warning(request, 'Any text.')
+    # messages.error(request, 'Any text.')
 
     if request.method == 'POST':
         form = cls_registerform(request.POST)
@@ -25,8 +25,9 @@ def func_register(request): #% my_project/contact/urls.py
 def func_loginview(request): ##
     form = AuthenticationForm(request) ##
     if request.method == 'POST': ##
+        form = AuthenticationForm(request, data=request.POST) ##
         if form.is_valid(): ##
             user = form.get_user() ##
+            # messages.success(request, 'Login made successfully.') ##
             print(user)
-        form = AuthenticationForm(request, data=request.POST) ##
     return render(request, 'contact/login.html', {'form': form}) ##
