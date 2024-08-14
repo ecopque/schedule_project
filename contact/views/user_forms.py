@@ -7,6 +7,7 @@ from contact.forms import cls_registerform # my_project/contact/forms.py
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.forms import AuthenticationForm ##
+from django.contrib import auth ##
 
 def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
@@ -31,6 +32,7 @@ def func_loginview(request): ##
         if form.is_valid(): ##
             user = form.get_user() ##
             # messages.success(request, 'Login made successfully.') ##
+            auth.login(request, user) ##
             print('Authenticated user (not logged):', user)
         else:
             messages.error(request, 'Invalid login.') ##
