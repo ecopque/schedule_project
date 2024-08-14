@@ -18,5 +18,5 @@ urlpatterns = [
      # User CRU (create, read, update)
      path('user/create/', user_forms.func_register, name='contact_register'), # my_project/contact/views/user_forms.py
 
-     path('user/login/', user_forms.func_loginview, name='contact_login'), # my_project/contact/views/user_forms.py
+     path('user/login/', user_forms.func_loginview, name='contact_login'), ## # my_project/contact/views/user_forms.py
 ]

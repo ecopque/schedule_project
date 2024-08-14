@@ -30,4 +30,4 @@ def func_loginview(request): ##
             user = form.get_user() ##
             # messages.success(request, 'Login made successfully.') ##
             print(user)
-    return render(request, 'contact/login.html', {'form': form}) ##
+    return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
