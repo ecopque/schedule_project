@@ -16,5 +16,7 @@ urlpatterns = [
      path('contacts/<int:contact_id>/delete/', contact_forms.func_delete, name='contact_delete'), # my_project/contact/views/contact_forms.py
 
      # User CRU (create, read, update)
-     path('user/create/', user_forms.func_register, name='contact_register') # my_project/contact/views/user_forms.py
+     path('user/create/', user_forms.func_register, name='contact_register'), # my_project/contact/views/user_forms.py
+
+     path('user/login/', user_forms.func_loginview, name='contact_login'), # my_project/contact/views/user_forms.py
 ]
