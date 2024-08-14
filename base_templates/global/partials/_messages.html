@@ -1,1 +1,9 @@
 <!-- # my_project/base_templates/partials/_messages.html -->
+
+{% if messages %} <!-- ## -->
+    {% for message in messages %}
+        <div class="message {{message.tags}}"> <!-- ## -->
+            {{message}} <!-- ## -->
+        </div>
+    {% endfor %}
+{% endif %}
