@@ -4,6 +4,7 @@ from django.shortcuts import render
 from contact.forms import cls_registerform # my_project/contact/forms.py
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.contrib.auth.forms import AuthenticationForm ##
 
 def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
@@ -20,3 +21,13 @@ def func_register(request): #% my_project/contact/urls.py
             messages.success(request, 'Registered user.')
             return redirect('contact_index')
     return render(request, 'contact/register.html', {'form': form}) # my_project/contact/templates/contact/register.html
+
+def func_loginview(request): ##
+    form = AuthenticationForm(request) ##
+    if request.method == 'POST': ##
+        if form.is_valid(): ##
+            user = form.get_user() ##
+            print(user)
+        form = AuthenticationForm(request, data=request.POST) ##
+
+    return render(request, 'contact/login.html', {'form': form}) ##
