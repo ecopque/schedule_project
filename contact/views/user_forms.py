@@ -37,3 +37,7 @@ def func_loginview(request): ##
         else:
             messages.error(request, 'Invalid login.') ##
     return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
+
+def func_logoutview(request): ##
+    auth.logout(request) ##
+    return redirect('contact_login')
