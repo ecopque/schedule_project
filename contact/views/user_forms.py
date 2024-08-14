@@ -29,5 +29,4 @@ def func_loginview(request): ##
             user = form.get_user() ##
             print(user)
         form = AuthenticationForm(request, data=request.POST) ##
-
     return render(request, 'contact/login.html', {'form': form}) ##
