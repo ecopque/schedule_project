@@ -8,6 +8,15 @@
 <body>
     <!-- <h1> QUALQUER COISA </h1> -->
      {% include 'global/partials/_header.html' %} <!-- # my_project/base_templates/partials/_header.html -->
+    
+     {% if messages %}
+        {% for message in messages %}
+            <div class="message {{message.tags}}">
+                {{message}}
+            </div>
+        {% endfor %}
+     {% endif %}
+
     <main class="content"> <!-- # my_project/base_static/global/css/style.css -->
         {% block content %}{% endblock content %}
         {% include 'global/partials/_pagination.html' %} <!-- # my_project/base_templates/partials/_pagination.html -->
