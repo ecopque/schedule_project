@@ -9,7 +9,7 @@
 <p>. List contacts: http://127.0.0.1:8000/</p>
 <p>. Create user: http://127.0.0.1:8000/user/create/</p>
 <p>. Login user: http://127.0.0.1:8000/user/login/</p>
-<p></p>
+<p>. Register update: http://127.0.0.1:8000/user/update/</p>
 <p></p>
 <p></p>
 <p></p>
