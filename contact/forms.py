@@ -78,3 +78,12 @@ class cls_registerupdateform(forms.ModelForm): ##
             if User.objects.filter(email=email).exists():
                 self.add_error('email', ValidationError('This e-mail already exists.', code='invalid'),)
         return email
+
+    def clean_password1(self):
+        password1 = self.cleaned_data.get('password1') ##
+        if password1: ##
+            try:
+                password_validation.validate_password(password1) ##
+            except ValidationError as erros:
+                ...
+        return password1
