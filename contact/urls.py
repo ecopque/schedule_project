@@ -20,5 +20,5 @@ urlpatterns = [
 
      path('user/login/', user_forms.func_loginview, name='contact_login'), # my_project/contact/views/user_forms.py
      path('user/logout/', user_forms.func_logoutview, name='contact_logout'), # my_project/contact/views/user_forms.py
-     path('user/update/', user_forms.func_userupdate, name='contact_user_update'), ## # my_project/contact/views/user_forms.py
+     path('user/update/', user_forms.func_userupdate, name='contact_user_update'), # my_project/contact/views/user_forms.py
 ]

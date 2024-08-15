@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import auth
-from contact.forms import cls_registerupdateform ##
+from contact.forms import cls_registerupdateform
 
 def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
@@ -26,16 +26,16 @@ def func_register(request): #% my_project/contact/urls.py
             return redirect('contact_login') # my_project/contact/urls.py
     return render(request, 'contact/register.html', {'form': form}) # my_project/contact/templates/contact/register.html
 
-def func_userupdate(request): ##
-    form = cls_registerupdateform(instance=request.user) ##
+def func_userupdate(request):
+    form = cls_registerupdateform(instance=request.user)
     if request.method != 'POST':
-        return render(request, 'contact/register.html', {'form': form}) ##
-    form = cls_registerupdateform(data=request.POST, instance=request.user) ##
+        return render(request, 'contact/register.html', {'form': form})
+    form = cls_registerupdateform(data=request.POST, instance=request.user)
     if not form.is_valid():
-        return render(request, 'contact/register.html', {'form': form}) ##
+        return render(request, 'contact/register.html', {'form': form})
     else:
-        form.save() ##
-        return render(request, 'contact/register.html', {'form': form}) ##
+        form.save()
+        return render(request, 'contact/register.html', {'form': form})
 
 def func_loginview(request):
     form = AuthenticationForm(request)
