@@ -27,7 +27,7 @@ def func_register(request): #% my_project/contact/urls.py
     return render(request, 'contact/register.html', {'form': form}) # my_project/contact/templates/contact/register.html
 
 def func_userupdate(request): ##
-    form = cls_registerupdateform() ##
+    form = cls_registerupdateform(instance=request.user) ##
     return render(request, 'contact/register.html', {'form': form}) ##
 
 
