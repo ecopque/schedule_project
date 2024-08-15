@@ -84,6 +84,6 @@ class cls_registerupdateform(forms.ModelForm):
         if password1:
             try:
                 password_validation.validate_password(password1)
-            except ValidationError as erros:
-                ...
+            except ValidationError as errors:
+                self.add_error('password', ValidationError(errors))
         return password1
