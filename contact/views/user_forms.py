@@ -22,7 +22,7 @@ def func_register(request): #% my_project/contact/urls.py
         if form.is_valid():
             form.save()
             messages.success(request, 'Registered user.')
-            return redirect('contact_login') ##
+            return redirect('contact_login') ## # my_project/contact/urls.py
     return render(request, 'contact/register.html', {'form': form}) # my_project/contact/templates/contact/register.html
 
 def func_loginview(request): ##
@@ -34,7 +34,7 @@ def func_loginview(request): ##
             auth.login(request, user) ##
             messages.success(request, 'Login made successfully.') ##
             print('Authenticated user (not logged):', user)
-            return redirect('contact_index') ##
+            return redirect('contact_index') ## # my_project/contact/urls.py
         else:
             messages.error(request, 'Invalid login.') ##
     return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
