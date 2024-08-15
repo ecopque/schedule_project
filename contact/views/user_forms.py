@@ -31,13 +31,14 @@ def func_loginview(request): ##
         form = AuthenticationForm(request, data=request.POST) ##
         if form.is_valid(): ##
             user = form.get_user() ##
-            # messages.success(request, 'Login made successfully.') ##
             auth.login(request, user) ##
+            messages.success(request, 'Login made successfully.') ##
             print('Authenticated user (not logged):', user)
+            return redirect('contact_index') ##
         else:
             messages.error(request, 'Invalid login.') ##
     return render(request, 'contact/login.html', {'form': form}) ## # my_project/contact/templates/contact/login.html
 
 def func_logoutview(request): ##
     auth.logout(request) ##
-    return redirect('contact_login')
+    return redirect('contact_login') ##
