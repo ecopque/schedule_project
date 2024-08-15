@@ -59,4 +59,4 @@ class cls_registerform(UserCreationForm):
 class cls_registerupdateform(forms.ModelForm): ##
     class Meta: ##
         model = User
-        field = ('first_name', 'last_name', 'email', 'username',) ##
+        fields = ('first_name', 'last_name', 'email', 'username',) ##
