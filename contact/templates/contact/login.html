@@ -5,7 +5,7 @@
   <h1>Login User</h1>
   <div class="form-wrapper">
     <h2>Login {{user}} ({{user.is_authenticated}})</h2> <!-- ## -->
-      {% if user.is_authenticated %}:
+      {% if user.is_authenticated %}
         <p> You logged as "{{user.username}}".
             Click <a href="{% url 'contact_logout' %}">here</a> to leave.
         </p>
