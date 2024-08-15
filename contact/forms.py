@@ -55,3 +55,8 @@ class cls_registerform(UserCreationForm):
         if User.objects.filter(email=email).exists():
             self.add_error('email', ValidationError('This e-mail already exists.'))
         return email
+    
+class cls_registerupdateform(forms.ModelForm): ##
+    class Meta: ##
+        model = User
+        field = ('first_name', 'last_name', 'email', 'username',) ##
