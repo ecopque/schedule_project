@@ -71,6 +71,13 @@ class cls_registerupdateform(forms.ModelForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'username',)
 
+    def clean(self):
+        password1 = self.cleaned_data.get('password1') ##
+        password2 = self.cleaned_data.get('password2') ##
+        
+        return super().clean()
+
+
     def clean_email(self):
         email = self.cleaned_data.get('email')
         current_email = self.instance.email
