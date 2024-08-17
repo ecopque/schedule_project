@@ -27,13 +27,13 @@ def func_register(request): #% my_project/contact/urls.py
 def func_userupdate(request):
     form = cls_registerupdateform(instance=request.user)
     if request.method != 'POST':
-        return render(request, 'contact/user_update.html', {'form': form}) ##
+        return render(request, 'contact/user_update.html', {'form': form})
     form = cls_registerupdateform(data=request.POST, instance=request.user)
     if not form.is_valid():
-        return render(request, 'contact/user_update.html', {'form': form}) ##
+        return render(request, 'contact/user_update.html', {'form': form})
     else:
         form.save()
-        return redirect('contact_user_update') ##
+        return redirect('contact_user_update')
 
 def func_loginview(request):
     form = AuthenticationForm(request)
