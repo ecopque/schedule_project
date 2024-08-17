@@ -46,7 +46,7 @@ def func_loginview(request):
             auth.login(request, user)
             messages.success(request, 'Login made successfully.')
             print('Authenticated user (not logged):', user)
-            return redirect('contact_index')# my_project/contact/urls.py
+            return redirect('contact_index') # my_project/contact/urls.py
         else:
             messages.error(request, 'Invalid login.')
     return render(request, 'contact/login.html', {'form': form}) # my_project/contact/templates/contact/login.html
