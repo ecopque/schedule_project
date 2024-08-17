@@ -1,0 +1,12 @@
+<!-- # my_project/contact/templates/contact/user_update.html -->
+
+{% extends "global/base.html" %} <!-- # my_project/base_templates/global/base.html -->
+{% block content %}
+  <h1>Create Contact</h1>
+  <div class="form-wrapper">
+    <h2>Update User</h2>
+    
+    {% include 'contact/partials/_user-form.html' %} <!-- # my_project/contact/templates/contact/partials/_user-form.html -->
+
+  </div>
+{% endblock content %}
