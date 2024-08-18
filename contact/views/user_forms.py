@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import auth
 from contact.forms import cls_registerupdateform
-from django.contrib.auth.decorators import login_required ##
+from django.contrib.auth.decorators import login_required
 
 def func_register(request): #% my_project/contact/urls.py
     form = cls_registerform()
@@ -25,7 +25,7 @@ def func_register(request): #% my_project/contact/urls.py
             return redirect('contact_login') # my_project/contact/urls.py
     return render(request, 'contact/register.html', {'form': form}) # my_project/contact/templates/contact/register.html
 
-@login_required(login_url='contact_login') ##A: # my_project/contact/urls.py
+@login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_userupdate(request):
     form = cls_registerupdateform(instance=request.user)
     if request.method != 'POST':
@@ -35,7 +35,7 @@ def func_userupdate(request):
         return render(request, 'contact/user_update.html', {'form': form})
     else:
         form.save()
-        return redirect('contact_user_update') ##B:
+        return redirect('contact_user_update')
 
 def func_loginview(request):
     form = AuthenticationForm(request)
@@ -51,7 +51,7 @@ def func_loginview(request):
             messages.error(request, 'Invalid login.')
     return render(request, 'contact/login.html', {'form': form}) # my_project/contact/templates/contact/login.html
 
-@login_required(login_url='contact_login') ##A: # my_project/contact/urls.py
+@login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_logoutview(request):
     auth.logout(request)
     return redirect('contact_login')

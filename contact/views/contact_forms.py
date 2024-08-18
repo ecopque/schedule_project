@@ -6,9 +6,9 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
 from contact.forms import cls_contact
-from django.contrib.auth.decorators import login_required ##
+from django.contrib.auth.decorators import login_required
 
-@login_required(login_url='contact_login') ##A: # my_project/contact/urls.py
+@login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_create(request):
     # if request.method == 'POST':
     #     print(request.method)
@@ -31,7 +31,7 @@ def func_create(request):
     context = {'form':cls_contactform(), 'form_action': form_action,}
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
-@login_required(login_url='contact_login') ##A: # my_project/contact/urls.py
+@login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_update(request, contact_id):
     contact = get_object_or_404(cls_contact, pk=contact_id, show=True) # my_project/contact/models.py
     form_action = reverse('contact_update', args=(contact_id,))
@@ -47,7 +47,7 @@ def func_update(request, contact_id):
     context = {'form':cls_contactform(instance=contact), 'form_action': form_action,}
     return render(request, 'contact/create.html', context) # my_project/contact/templates/contact/create.html
 
-@login_required(login_url='contact_login') ##A: # my_project/contact/urls.py
+@login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_delete(request, contact_id):
     contact = get_object_or_404(cls_contact, pk=contact_id, show=True) # my_project/contact/models.py
     confirmation = request.POST.get('confirmation', 'no')
