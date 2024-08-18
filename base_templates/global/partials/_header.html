@@ -9,22 +9,22 @@
 
     <nav class="menu"> <!-- # my_project/base_static/global/css/style.css -->
         <ul class="menu-list"> <!-- # my_project/base_static/global/css/style.css -->
-            {% if user.is_authenticated %} <!-- ## #AAA: -->
+            {% if user.is_authenticated %} <!-- # -->
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_create' %}" class="menu-link"> CREATE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_create' %}" class="menu-link"> CREATE </a> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_user_update' %}" class="menu-link"> PROFILE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_user_update' %}" class="menu-link"> PROFILE </a> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_logout' %}" class="menu-link"> LOGOUT </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_logout' %}" class="menu-link"> LOGOUT </a> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
             {% else %}
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_login' %}" class="menu-link"> LOGIN </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_login' %}" class="menu-link"> LOGIN </a> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_register' %}" class="menu-link"> REGISTER </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_register' %}" class="menu-link"> REGISTER </a> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
             {% endif %}
         </ul>
