@@ -9,16 +9,29 @@
 
     <nav class="menu"> <!-- # my_project/base_static/global/css/style.css -->
         <ul class="menu-list"> <!-- # my_project/base_static/global/css/style.css -->
-            <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                <a href="{% url 'contact_create' %}" class="menu-link"> <!-- # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
-                    CREATE
-                </a>
+
+            {% if user.authenticated %} <!-- ## #AAA: -->
+                <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_create' %}" class="menu-link"> CREATE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                </li>
+                <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_update' %}" class="menu-link"> PROFILE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                </li>
+                <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_logout' %}" class="menu-link"> LOGOUT </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                </li>
+
+            {% endif %}
+
+            <!---
             </li>
-            <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                <a href="" class="menu-link"> <!-- # my_project/base_static/global/css/style.css -->
+            <li class="menu-item"> 
+                <a href="" class="menu-link"> 
                     Link2!
                 </a>
             </li>
+            -->
+
         </ul>
     </nav>
     
