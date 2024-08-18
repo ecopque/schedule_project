@@ -15,7 +15,7 @@ class cls_contactform(forms.ModelForm):
     #     super().__init__(*args, **kwargs)
     #     self.fields['first_name'].widget.attrs.update({'class': 'class-a class-b', 'placeholder': 'Write here 2',}) # substituted
 
-    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*',}))
+    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*',}), required=False) ##B:
     class Meta:
         model = cls_contact
         fields = ('first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',)
