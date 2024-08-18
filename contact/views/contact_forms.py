@@ -21,7 +21,7 @@ def func_create(request):
         context = {'form':form, 'form_action': form_action,} #% my_project/contact/templates/contact/create.html
         if form.is_valid():
             contact = form.save(commit=False)
-            contact.owner = request.user ##A:
+            contact.owner = request.user
             contact.show = True
             contact.save()
             # contact = form.save()
@@ -34,7 +34,7 @@ def func_create(request):
 
 @login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_update(request, contact_id):
-    contact = get_object_or_404(cls_contact, pk=contact_id, show=True, owner=request.user) ##B: # my_project/contact/models.py
+    contact = get_object_or_404(cls_contact, pk=contact_id, show=True, owner=request.user) # my_project/contact/models.py
     form_action = reverse('contact_update', args=(contact_id,))
     if request.method == 'POST':
         form = cls_contactform(request.POST, request.FILES, instance=contact)
@@ -50,7 +50,7 @@ def func_update(request, contact_id):
 
 @login_required(login_url='contact_login') # my_project/contact/urls.py
 def func_delete(request, contact_id):
-    contact = get_object_or_404(cls_contact, pk=contact_id, show=True) # my_project/contact/models.py
+    contact = get_object_or_404(cls_contact, pk=contact_id, show=True, owner=request.user) #B: # my_project/contact/models.py
     confirmation = request.POST.get('confirmation', 'no')
     print('Confirmation', confirmation)
     if confirmation == 'yes':
