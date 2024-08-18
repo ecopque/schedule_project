@@ -10,12 +10,12 @@
     <nav class="menu"> <!-- # my_project/base_static/global/css/style.css -->
         <ul class="menu-list"> <!-- # my_project/base_static/global/css/style.css -->
 
-            {% if user.authenticated %} <!-- ## #AAA: -->
+            {% if user.is_authenticated %} <!-- ## #AAA: -->
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
                     <a href="{% url 'contact_create' %}" class="menu-link"> CREATE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
-                    <a href="{% url 'contact_update' %}" class="menu-link"> PROFILE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
+                    <a href="{% url 'contact_user_update' %}" class="menu-link"> PROFILE </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
                 </li>
                 <li class="menu-item"> <!-- # my_project/base_static/global/css/style.css -->
                     <a href="{% url 'contact_logout' %}" class="menu-link"> LOGOUT </a> <!-- ## # my_project/contact/urls.py | # my_project/base_static/global/css/style.css -->
