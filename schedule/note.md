@@ -11,5 +11,3 @@
 <p>. Login user: http://127.0.0.1:8000/user/login/</p>
 <p>. Register update: http://127.0.0.1:8000/user/update/</p>
 <p></p>
-<p></p>
-<p></p>
