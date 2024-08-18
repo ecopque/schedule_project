@@ -21,6 +21,7 @@ def func_create(request):
         context = {'form':form, 'form_action': form_action,} #% my_project/contact/templates/contact/create.html
         if form.is_valid():
             contact = form.save(commit=False)
+            contact.owner = request.user ##
             contact.show = True
             contact.save()
             # contact = form.save()
