@@ -35,7 +35,7 @@ def func_userupdate(request):
         return render(request, 'contact/user_update.html', {'form': form})
     else:
         form.save()
-        return redirect('contact_user_update')
+        return redirect('contact_user_update') ##B:
 
 def func_loginview(request):
     form = AuthenticationForm(request)
