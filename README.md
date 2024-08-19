@@ -26,7 +26,7 @@ The Schedule Project is a web application developed with Django that allows user
 
 ## Images of the Schedule Project
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-19%2010-23-48.png)
-![readme]()
+![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-19%2010-41-37.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-07-10%2011-02-56.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-07-25%2010-48-57.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-07-19%2011-29-21.png)
