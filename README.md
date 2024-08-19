@@ -24,6 +24,10 @@ The Schedule Project is a web application developed with Django that allows user
 - Models: The cls_contact model represents the structure of contacts in the database, including fields like first name, last name, and the contact owner. The relationship between the contact and the user is established through the owner field, ensuring that each contact belongs to a specific user.
 - Templates: The project uses Django templates to render HTML pages, ensuring a clear separation between business logic and visual presentation. This makes the application easier to maintain and scale.
 
+## About
+
+The Schedule Project is ideal for those looking for a simple and efficient solution to manage contacts, with the benefit of a robust structure provided by Django. With an emphasis on security and ease of use, this project is an excellent foundation for future expansions and customizations.
+
 ## Images of the Schedule Project
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-19%2010-23-48.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-19%2010-41-37.png)
