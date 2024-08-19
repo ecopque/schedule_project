@@ -7,7 +7,7 @@ The Schedule Project is a web application developed with Django that allows user
 - Register: Create an account to start managing your contacts.
 - Login: Access the system using your credentials.
 - Create Contacts: Add new contacts through a simple form.
-- Edit Contacts: Update your contacts' information as needed.
+- Edit Contacts: Update your contacts information as needed.
 - Delete Contacts: Remove contacts that are no longer necessary.
 
 ## Features
