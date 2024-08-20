@@ -1,3 +1,4 @@
+# my_project/schedule/settings.py
 """
 Django settings for schedule_project project.
 
@@ -9,7 +10,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-# my_project/schedule/settings.py
+
 
 from pathlib import Path
 
