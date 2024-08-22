@@ -7,6 +7,7 @@ from contact.models import cls_contact # my_project/contact/models.py
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import password_validation
+# Preciso de apoio!
 
 class cls_contactform(forms.ModelForm):
     # first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'class-a class-b', 'placeholder': 'Write here3',}), label='First Nameee', help_text='Help text.') # my_project/contact/templates/contact/create.html
