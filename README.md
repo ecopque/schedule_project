@@ -27,6 +27,7 @@ The Schedule Project is a web application developed with Django that allows user
 ## About
 
 The Schedule Project is ideal for those looking for a simple and efficient solution to manage contacts, with the benefit of a robust structure provided by Django. With an emphasis on security and ease of use, this project is an excellent foundation for future expansions and customizations.
+https://linktr.ee/edsoncopque
 
 ## Images of the Schedule Project
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-19%2010-23-48.png)
@@ -55,4 +56,4 @@ The Schedule Project is ideal for those looking for a simple and efficient solut
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-06%2011-30-41.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-06%2011-29-07.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-02%2011-36-22.png)
-https://linktr.ee/edsoncopque
+PIV[A]
