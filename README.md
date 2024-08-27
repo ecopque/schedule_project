@@ -55,4 +55,4 @@ The Schedule Project is ideal for those looking for a simple and efficient solut
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-06%2011-30-41.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-06%2011-29-07.png)
 ![readme](https://github.com/ecopque/schedule_project/blob/main/prints/Screenshot%20from%202024-08-02%2011-36-22.png)
-PIV[A}
+https://linktr.ee/edsoncopque
