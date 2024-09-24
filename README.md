@@ -28,7 +28,7 @@ The Schedule Project is a web application developed with Django that allows user
 
 The Schedule Project is ideal for those looking for a simple and efficient solution to manage contacts, with the benefit of a robust structure provided by Django. With an emphasis on security and ease of use, this project is an excellent foundation for future expansions and customizations.
 
-## Deploy
+## Deploy (temp)
 
 http://34.45.91.32/
 
