@@ -1,3 +1,4 @@
+![LastCommit-Schedule_Project](https://img.shields.io/github/last-commit/ecopque/schedule_project?logo=&logoColor=white&label=/schedule_project&color=9bf12&&style=flat)&nbsp;
 # Schedule Projet
 
 The Schedule Project is a web application developed with Django that allows users to efficiently and securely manage contacts. Django, one of the most robust and popular frameworks for web development in Python, provides a solid structure for creating scalable and secure applications. This project is designed with a focus on contact organization, offering features such as creating, updating, and deleting records in an intuitive way.
